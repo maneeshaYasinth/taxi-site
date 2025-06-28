@@ -32,7 +32,6 @@
  
 <!-- form -->
 <div class="home-container">
-    <div class="home-content">
         <div class="inner-content">
             <h3>best in everywhere</h3>
             <h2>trusted cab service with MEEYA</h2>
@@ -40,26 +39,25 @@
             <a href="#" class="booknow">book now</a>
         </div>
         <div class="inner-content">
-           <div class="contact-form">
-               <div class="form-heading">
-                   <h1>book a cab</h1>
-               </div>
-               <div class="form-fields">
-                   <input type="text" placeholder="name">
-                   <input type="text" placeholder="phone">
-                   <input type="text" placeholder="when">
-                   <input type="text" placeholder="date">
-                   <input type="text" placeholder="start">
-                   <input type="text" placeholder="end">
-               </div>
-               <div class="submit">
-                <a href="#">Submit</a>
-               </div>
-              
-           </div>
-           
+          <div class="contact-form">
+            <div class="form-heading">
+              <h1>Book A Cab</h1>
+            </div>
+            <form id="cabForm">
+              <div class="form-fields">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="phone" placeholder="Phone" required>
+                <input type="text" id="when" placeholder="When" required>
+                <input type="text" id="date" placeholder="Date" required>
+                <input type="text" id="start" placeholder="Start Location" required>
+                <input type="text" id="end" placeholder="End Location" required>
+              </div>
+              <div class="submit">
+                <button type="submit" id="submitBtn">🚕 Book Now</button>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
 </div>
 <!-- home section ended -->
 
