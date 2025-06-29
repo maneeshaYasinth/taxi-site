@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TaxiMEEYA</title>
+  <link rel="stylesheet" href="ContactStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <a href="#" id="logo"><img src="images/Taxi_Meeya.png" alt="Taxi Meeya Logo"></a>
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="#">gallery</a>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+    </nav>
+    <a href="#" id="menu-bars" class="fas fa-bars"></a>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Full Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Phone Number (Optional)" />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>📞 Phone:</strong> +94 70 123 4567</p>
+        <p><strong>✉️ Email:</strong> support@taximeeya.lk</p>
+        <p><strong>📍 Address:</strong> 123 Main Street, Colombo, Sri Lanka</p>
+        <p><strong>🕒 Hours:</strong> Mon – Sun: 6.00am – 11.00pm</p>
+      </div>
+
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63341.17557687944!2d79.83800584719576!3d6.921839495399819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25925a5c9766d%3A0xc1b64608b74b0c78!2sColombo!5e0!3m2!1sen!2slk!4v1665083781234!5m2!1sen!2slk"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
