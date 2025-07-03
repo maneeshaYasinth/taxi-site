@@ -15,10 +15,10 @@
         <header class="header">
             <a href="#" id="logo"><img src="images/Taxi_Meeya.png" alt=""></a>
             <nav class="navbar">
-                <a href="#">home</a>
+                <a href="/taxi-siteindex.php">home</a>
                 <a href="#">gallery</a>
                 <a href="#">about</a>
-                <a href="contact-us.html">Contact</a>
+                <a href="/taxi-site/contact-us.php">Contact</a>
             </nav>
             <a href="#" id="menu-bars" class="fas fa-bars"></a>
         </header>

@@ -1,6 +1,6 @@
-/* General */
+/* General styles */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: #121212;
   color: #f5f5f5;
   margin: 0;
@@ -43,7 +43,7 @@ body {
   cursor: pointer;
 }
 
-/* Contact Section */
+/* Contact/Feedback Section */
 .contact-section {
   padding: 60px 20px;
   background: linear-gradient(135deg, #000000, #1f1f1f);
@@ -77,14 +77,23 @@ h2 {
   color: #fff;
   font-size: 1em;
   outline: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, border 0.3s ease;
 }
 
+/* Textarea */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Focus states */
 .contact-form input:focus,
 .contact-form textarea:focus {
   background: #3b3b3b;
+  border: 1px solid #f9c500;
 }
 
+/* Submit button */
 .contact-form button {
   background-color: #f9c500;
   color: #000;
@@ -95,6 +104,8 @@ h2 {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
 }
 
 .contact-form button:hover {
@@ -102,6 +113,44 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* Rating stars */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 2.5rem;
+  color: #555; /* default star color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+  color: #f9c500; /* gold highlight */
+}
+
+.rating input[type="radio"]:checked + label,
+.rating input[type="radio"]:checked + label ~ label {
+  color: #f9c500;
+}
+
+.rating input[type="radio"]:focus + label {
+  outline: 2px solid #f9c500;
+  outline-offset: 2px;
+}
+
+/* Contact info */
 .contact-info {
   margin-top: 40px;
   line-height: 1.8;
@@ -112,6 +161,14 @@ h2 {
   color: #f9c500;
 }
 
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 5px 0;
+}
+
 iframe {
   margin-top: 30px;
   width: 100%;
@@ -120,7 +177,20 @@ iframe {
   border-radius: 8px;
 }
 
-/* Responsive */
+/* Placeholder styling */
+::placeholder {
+  color: #aaa;
+  opacity: 0.8;
+  font-family: "Inter", sans-serif;
+}
+
+/* Highlight invalid fields */
+input.invalid,
+textarea.invalid {
+  border: 1px solid #e74c3c !important;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .navbar {
     display: none;
@@ -128,5 +198,13 @@ iframe {
 
   #menu-bars {
     display: block;
+  }
+
+  .container {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 2em;
   }
 }
